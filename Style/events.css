@@ -1,0 +1,108 @@
+.events {
+    margin-top: 50px;
+    padding-top: 50px;
+
+    .events_concerts {
+        .events_cards {
+            display: flex;
+
+            .events_card {
+                color: #fff;
+                max-width: 500px;
+                height: 500px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+                display: flex;
+                flex-direction: column-reverse;
+                box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.6);
+                cursor: pointer;
+                transition: .3s;
+
+                .events_description {
+                    margin: 0 20px 40px 20px;
+
+                    h3 {
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            .events_card:hover {
+                scale: 1.05;
+            }
+
+            .events_card:first-child {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Assets/concert.jpeg);
+            }
+
+            .events_card:nth-child(2) {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Assets/concert4.jpeg);
+            }
+
+            .events_card:nth-child(3) {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Assets/concert5.jpeg);
+            }
+
+            .events_card:nth-child(4) {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Assets/concert10.jpg);
+            }
+
+            .events_card:nth-child(5) {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Assets/concert11.jpeg);
+            }
+
+            .events_card:nth-child(6) {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Assets/concert16.jpeg);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .events_cards {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .events_card {
+        margin-bottom: 40px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .events_cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-top: 40px;
+
+        .events_card {
+            width: calc(50% - 20px);
+            margin-top: 40px;
+        }
+
+        .events_card:nth-child(odd) {
+            margin: 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .events_cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-top: 40px;
+
+        .events_card {
+            width: calc(33.3% - 27px);
+            margin-top: 40px;
+        }
+
+        .events_card:nth-child(odd) {
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,276 @@
+.about {
+    margin-top: 50px;
+    padding-top: 50px;
+
+    .about_story {
+        p {
+            margin-bottom: 20px;
+        }
+
+        img {
+            border-radius: 15px;
+            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.6);
+        }
+    }
+
+    .about_info {
+        .about_stats {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            list-style: none;
+
+            .about_data {
+                h1 {
+                    font-size: 100px;
+                }
+            }        
+        }
+    }
+
+    .about_partners, .about_info, .about_feedback {
+        .main-title {
+            justify-content: center;
+        }
+    }
+
+    .about_feedback {
+        .main-title {
+            margin-bottom: 40px;
+        }
+
+        .about_reviews {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .about_review {
+                list-style: none;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+                border-radius: 15px;
+                padding: 20px;
+
+                .review_bio {
+                    display: flex;
+                    gap: 20px;
+
+                    .review_img {   
+                        margin-bottom: 10px;
+
+                        img {
+                            width: 70px;
+                            height: 70px;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .review_info {
+                        h3 {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+
+                p {
+                    text-align: justify;
+                }
+            }
+        }
+    }
+}
+
+
+.infinite-slider {
+    overflow: hidden;
+    width: 100%;
+    background: #09122C;
+    padding: 20px 0;
+    border-radius: 25px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 1);
+    margin-top: 50px;
+  }
+  
+  .infinite-track {
+    display: flex;
+    width: calc(200%); 
+    animation: slide-left 20s linear infinite;
+  }
+
+  .infinite-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    justify-content: space-around;
+  }
+  
+  .infinite-list li {
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .infinite-list li:hover {
+    scale: 1.1;
+  }
+  
+  .infinite-list img {
+    height: auto;
+  }
+  
+  @keyframes slide-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  
+@media only screen and (max-width: 768px) {
+    .about {
+        .about_story {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../Assets/concert8.jpeg);
+            color: #fff;
+
+            img {
+                display: none;
+            }
+        }
+
+        .about_stats {
+            gap: 40px;
+        }
+
+        .about_feedback {
+            .about_reviews {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    }
+
+    .infinite-list li {
+	    width: 100px;
+        height: 100px;
+        margin: 0 10px;
+    }
+	
+    .infinite-list img {
+	    width: 80px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .about {
+        .about_story {
+            color: #09122C;
+
+            .about_intro {
+                .about_description {
+                    background-image: url(../Assets/note_light.png);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+            
+            img {
+                margin-top: 20px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            button {
+                margin: 20px 0;
+            }
+        }
+
+        .about_stats {
+            gap: 60px;
+        }
+
+        .about_feedback {
+            .about_reviews {
+                gap: 20px;
+
+                .about_review {
+                    width: calc(50% - 50px);
+                }
+
+                .about_review:last-of-type {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+	.infinite-list li {
+	  	width: 150px;
+    	height: 150px;
+        margin: 0 30px;
+	}
+	
+	.infinite-list img {
+	  	width: 130px;
+	}
+}
+
+@media only screen and (min-width: 1025px) {
+    .about {
+        .about_story {
+            color: #09122C;
+
+            .about_intro {
+                display: flex;
+                gap: 50px;
+
+                .about_description {
+                    background-image: url(../Assets/note_light.png);
+                    background-position: center;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            img {
+                width: 50%;
+                object-fit: cover;
+            }
+
+            button {
+                margin: 50px 0px 0px 0px;
+            }
+        }
+
+        .about_stats {
+            gap: 80px;
+        }
+
+        .about_feedback {
+            .about_reviews {
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                gap: 30px;
+            }
+        }
+    }
+
+	.infinite-list li {
+	  	width: 150px;
+    	height: 150px;
+        margin: 0 30px;
+	}
+	
+	.infinite-list img {
+	  	width: 130px;
+	}
+}

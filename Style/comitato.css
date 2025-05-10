@@ -1,0 +1,165 @@
+.comitato {
+    margin-top: 50px;
+    padding-top: 50px;
+
+    .comitato_team {
+        scroll-margin-top: 100px;
+    
+        .main-tag {
+            color: #aa94ff;
+        }
+    
+        .comitato_cards {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+    
+            .comitato_card {
+                background-color: #09122C;
+                box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+                color: #fff;
+    
+                .comitato_photo, .comitato_bio {
+                    box-sizing: border-box;
+                }
+    
+                .comitato_bio {
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+    
+                    h3 {
+                        margin-bottom: 10px;
+                    }
+    
+                    p:first-of-type {
+                        margin-top: 30px;
+                    }
+
+                    p {
+                        margin-bottom: 10px;
+                    }
+                }
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+    
+            .comitato_card:nth-child(even) {
+                flex-direction: row-reverse;
+                text-align: right;
+            }
+        }
+    }
+
+    .comitato_students {
+        .comitato_content {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .comitato_image {
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .comitato_description {
+            margin-bottom: 40px;
+            text-align: justify;
+
+            .comitato_data {
+                text-align: center;
+                margin-bottom: 30px;
+    
+                h1 {
+                    font-size: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .comitato_cards, .comitato_content {
+        margin-top: 30px;    
+    }
+
+    .comitato_card, .comitato_content {
+        max-width: 500px;
+    }
+
+    .comitato_content {
+        flex-direction: column;
+    }
+
+    .comitato_students {
+        flex-direction: column;
+
+        .comitato_image {
+            height: 356px;
+        }
+
+        .comitato_description {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .comitato_cards, .comitato_content {
+        margin-top: 40px;
+    }
+
+    .comitato_photo, .comitato_bio {
+        width: 50%;
+    }
+
+    .comitato_card {
+        display: flex;
+        max-width: 700px;
+    }
+
+    .comitato_content {
+        max-width: 700px;
+        flex-direction: column;
+    }
+
+    .comitato_image {
+        height: 500px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .comitato_cards, .comitato_content {
+        margin-top: 40px; 
+    }
+
+    .comitato_photo, .comitato_bio {
+        width: 50%;
+    }
+
+    .comitato_card {
+        display: flex;
+        max-width: 70%;
+    }
+
+    .comitato_content {
+        gap: 30px;
+    }
+
+    .comitato_description, .comitato_image {
+        width: 33.3%;
+    }
+}

@@ -1,0 +1,113 @@
+.contacts {
+    margin-top: 100px;
+
+    .main-tag {
+        color: #aa94ff;
+    }
+
+    .contacts_info {
+        .contacts_text {
+            margin-top: 40px;
+        }
+
+        .contacts_list {
+            list-style: none;
+
+            li {
+                margin-bottom: 10px;
+            }
+
+            li:last-of-type {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            a {
+                color: #09122C;
+                font-family: "Quicksand", sans-serif;
+                transition: .3s;
+            }
+
+            a:hover {
+                opacity: 0.7;
+            }
+        }
+
+        .official-title {
+            flex-direction: row;
+            text-align: left;
+            justify-content: left;
+        }
+
+        iframe {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.5);
+        }
+    }
+
+    .contacts_form {
+        .content_form {
+            margin: 40px auto 0 auto;
+
+            .contacts_field {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                margin-bottom: 10px;
+            }
+
+            button {
+                margin-top: 20px;
+                padding: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .contacts_info {
+        iframe {
+            width: 100%;
+            height: 500px;
+            margin-top: 30px;
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .contacts_info {
+        iframe {
+            width: 100%;
+            height: 500px;
+            margin-top: 30px;
+        }
+    }
+
+    .content_form {
+        width: 400px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .contacts_info {
+        .contacts_container {
+            display: flex;
+            gap: 50px;
+
+            .contacts_text, iframe {
+                width: 50%;
+            }
+            
+            iframe {
+                height: 500px;
+                margin-top: 30px;
+            }
+        }
+    }
+
+    .content_form {
+        width: 600px;
+    }
+}
